@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Car</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+            margin: 0;
+        }
+
+        .car {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .car::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 60px;
+            background-color: #2980b9;
+            top: -40px;
+            left: 40px;
+            border-radius: 15px;
+        }
+
+        .wheel {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -20px;
+        }
+
+        .wheel.left {
+            left: 20px;
+        }
+
+        .wheel.right {
+            right: 20px;
+        }
+
+        .window {
+            width: 35px;
+            height: 30px;
+            background-color: #ecf0f1;
+            position: absolute;
+            border-radius: 5px;
+        }
+
+        .window.left {
+            top: -25px;
+            left: 50px;
+        }
+
+        .window.right {
+            top: -25px;
+            right: 50px;
+        }
+    </style>
+</head>
 <body>
-
-<h2>HTML Images</h2>
-<p>HTML images are defined with the img tag:</p>
-
-<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
-
+    <div class="car">
+        <div class="window left"></div>
+        <div class="window right"></div>
+        <div class="wheel left"></div>
+        <div class="wheel right"></div>
+    </div>
 </body>
 </html>
-
